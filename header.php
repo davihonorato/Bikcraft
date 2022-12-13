@@ -2,11 +2,11 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
-		<title>Bikcraft - Bicicletas Personalizadas</title>
+		<title><?php bloginfo('name'); ?> - Bicicletas Personalizadas</title>
 		<meta name="description" content="Compre a sua bicicleta personalizada na Bikcraft. Possuímos modelos Passeio, Retrô e Esporte.">
 
 		<meta property="og:type" content="website"/>
-		<meta property="og:title" content="Bikcraft - Bicicletas Personalizadas"/>
+		<meta property="og:title" content="<?php bloginfo('name'); ?> - Bicicletas Personalizadas"/>
 		<meta property="og:description" content="Compre a sua bicicleta personalizada na Bikcraft. Possuímos modelos Passeio, Retrô e Esporte."/>
 		<meta property="og:url" content="http://bikcraft.com"/>
 		<meta property="og:image" content="http://bikcraft.com/img/og-image.png"/>
@@ -32,22 +32,11 @@
 				</a>
 				<nav class="grid-12 header_menu">
 					<ul>
-						<li><a href="sobre.html">Sobre</a></li>
-						<li><a href="produtos.html">Produtos</a></li>
-						<li><a href="portfolio.html">Portfólio</a></li>
-						<li><a href="contato.html">Contato</a></li>
+						<li><a href="/sobre">Sobre</a></li>
+						<li><a href="/produtos">Produtos</a></li>
+						<li><a href="/portfolio">Portfólio</a></li>
+						<li><a href="/contato">Contato</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-
-		<section class="introducao">
-			<div class="container">
-				<h1>Bicicletas Feitas a Mão</h1>
-				<blockquote class="quote-externo">
-					<p>“não tenha nada em sua casa que você não considere útil ou acredita ser bonito”</p>
-					<cite>WILLIAM MORRIS</cite>
-				</blockquote>
-				<a href="produtos.html" class="btn">Orçamento</a>
-			</div>
-		</section>
