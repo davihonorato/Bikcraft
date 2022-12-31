@@ -48,7 +48,7 @@ get_header();
 
 			<div class="call">
 				<p>clique aqui e veja os detalhes dos produtos</p>
-				<a href="produtos.html" class="btn btn-preto">Produtos</a>
+				<a href="/produtos" class="btn btn-preto">Produtos</a>
 			</div>
 
 		</section>
@@ -62,7 +62,7 @@ get_header();
 
 				<div class="call">
 					<p>conheça mais o nosso portfólio</p>
-					<a href="portfolio.html" class="btn">Portfólio</a>
+					<a href="/portifolio" class="btn">Portfólio</a>
 				</div>
 			</div>
 		</section>
