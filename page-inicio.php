@@ -22,7 +22,7 @@ get_header();
 
 				<li class="grid-1-3">
 					<div class="produtos_icone">
-						<img src="img/produtos/passeio.png" alt="Bikcraft Passeio">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/produtos/passeio.png" alt="Bikcraft Passeio">
 					</div>
 					<h3>Passeio</h3>
 					<p>Muito melhor do que passear pela orla a vidros fechados.</p>
@@ -30,7 +30,7 @@ get_header();
 
 				<li class="grid-1-3">
 					<div class="produtos_icone">
-						<img src="img/produtos/esporte.png" alt="Bikcraft Esporte">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/produtos/esporte.png" alt="Bikcraft Esporte">
 					</div>
 					<h3>Esporte</h3>
 					<p>Mais rápida do que Forrest Gump, ninguém vai pegar você.</p>
@@ -38,7 +38,7 @@ get_header();
 
 				<li class="grid-1-3">
 					<div class="produtos_icone">
-						<img src="img/produtos/retro.png" alt="Bikcraft Retrô">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/produtos/retro.png" alt="Bikcraft Retrô">
 					</div>
 					<h3>Retrô</h3>
 					<p>O passado volta para lembrarmos o que devemos fazer no futuro.</p>
@@ -57,11 +57,9 @@ get_header();
 		<section class="portfolio">
 			<div class="container">
 				<h2 class="subtitulo">Portfólio</h2>
-				<div class="portfolio_lista">
-					<div class="grid-8"><img src="img/portfolio/retro.jpg" alt="Bicicleta Retrô"></div>
-					<div class="grid-8"><img src="img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></div>
-					<div class="grid-16"><img src="img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></div>
-				</div>
+
+				<?php include(TEMPLATEPATH . "/inc/section-portifolio.php"); ?>
+
 				<div class="call">
 					<p>conheça mais o nosso portfólio</p>
 					<a href="portfolio.html" class="btn">Portfólio</a>
@@ -69,28 +67,8 @@ get_header();
 			</div>
 		</section>
 
-		<section class="qualidade container">
-			<h2 class="subtitulo">Qualidade</h2>
-			<img src="img/bikcraft-qualidade.png" alt="Bikcraft">
-			<ul class="qualidade_lista">
-				<li class="grid-1-3">
-					<h3>Durabilidade</h3>
-					<p>Sólida como pedra, leve como o vento e resistente como o diamante, são nossos diferenciais.</p>
-				</li>
-				<li class="grid-1-3">
-					<h3>Design</h3>
-					<p>Feitas sob medida para o melhor conforto e eficiência. Adaptamos a sua Bikcraft para o seu corpo.</p>
-				</li>
-				<li class="grid-1-3">
-					<h3>Sustentabilidade</h3>
-					<p>Além de ajudar a cuidar do meio ambiente, tirando carros da rua, toda a produção é sustentável.</p>
-				</li>
-			</ul>
-			<div class="call">
-				<p>conheça mais a nossa história</p>
-				<a href="sobre.html" class="btn btn-preto">Sobre</a>
-			</div>
-		</section>
+		<?php include(TEMPLATEPATH . "/inc/section-qualidade.php"); ?>
+		
 <?php endwhile; else: endif; ?>
 
 <?php get_footer(); ?>

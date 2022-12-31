@@ -5,7 +5,7 @@ get_header();
 ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<?php include(TEMPLATEPATH . "/inc/introducao.php"); ?>
+		<?php include(TEMPLATEPATH . "/inc/section-introducao.php"); ?>
 
 		<section class="contato container animar-interno">
 			<form action="enviar.php" method="post" name="form" class="formphp contato_form grid-8">

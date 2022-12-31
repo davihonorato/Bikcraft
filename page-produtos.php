@@ -5,7 +5,7 @@ get_header();
 ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<?php include(TEMPLATEPATH . "/inc/introducao.php"); ?>
+		<?php include(TEMPLATEPATH . "/inc/section-introducao.php"); ?>
 
 		<section class="container produto_item animar-interno">
 			<div class="grid-11">
