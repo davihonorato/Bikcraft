@@ -1,25 +1,21 @@
+<?php $sobre = get_page_by_title('sobre') ?>
+
 <section class="qualidade container">
-    <h2 class="subtitulo">Qualidade</h2>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/bikcraft-qualidade.png" alt="Bikcraft">
+    <h2 class="subtitulo"><?php the_field('titulo_qualidade', $sobre) ?></h2>
+    <img src="<?php the_field('imagem_qualidade', $sobre) ?>" alt="Bikcraft">
     <ul class="qualidade_lista">
+        <?php if(have_rows('diferenciais_qualidade', $sobre)): while(have_rows('diferenciais_qualidade', $sobre)): the_row(); ?>
         <li class="grid-1-3">
-            <h3>Durabilidade</h3>
-            <p>Sólida como pedra, leve como o vento e resistente como o diamante, são nossos diferenciais.</p>
+            <h3><?php the_sub_field('titulo_diferencial', $sobre); ?></h3>
+            <p><?php the_sub_field('texto_diferencial', $sobre); ?></p>
         </li>
-        <li class="grid-1-3">
-            <h3>Design</h3>
-            <p>Feitas sob medida para o melhor conforto e eficiência. Adaptamos a sua Bikcraft para o seu corpo.</p>
-        </li>
-        <li class="grid-1-3">
-            <h3>Sustentabilidade</h3>
-            <p>Além de ajudar a cuidar do meio ambiente, tirando carros da rua, toda a produção é sustentável.</p>
-        </li>
+        <?php endwhile; else : endif; ?>
     </ul>
 
     <?php if (!is_page('sobre')) { ?>
     <div class="call">
-        <p>conheça mais a nossa história</p>
-        <a href="sobre.html" class="btn btn-preto">Sobre</a>
+        <p><?php the_field('texto_chamada', $sobre); ?></p>
+        <a href="/sobre" class="btn btn-preto"><?php the_field('botao_chamada', $sobre); ?></a>
     </div>
     <?php } ?>
 </section>
