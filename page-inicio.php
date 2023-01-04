@@ -59,11 +59,7 @@ get_header();
 				<h2 class="subtitulo">Portfólio</h2>
 
 				<?php include(TEMPLATEPATH . "/inc/section-portifolio.php"); ?>
-
-				<div class="call">
-					<p>conheça mais o nosso portfólio</p>
-					<a href="/portifolio" class="btn">Portfólio</a>
-				</div>
+				
 			</div>
 		</section>
 
