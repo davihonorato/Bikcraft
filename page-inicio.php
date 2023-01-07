@@ -7,28 +7,24 @@ get_header();
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <?php 
-	$background_id = get_field('background_home');
+	$background_id_home = get_field('background_home');
 
-	$background_home_large = wp_get_attachment_image_src($background_id, 'large');
-	$background_home_medium = wp_get_attachment_image_src($background_id, 'medium');
+	$background_home_large = wp_get_attachment_image_src($background_id_home, 'large');
+	$background_home_medium = wp_get_attachment_image_src($background_id_home, 'medium');
 ?>
 
 <style type="text/css">
 	.introducao {
-		background: url("<?php $background_home_large[0] ?>") no-repeat center center;
+		background: url("<?php echo $background_home_large[0] ?>") no-repeat center center;
 		background-size: cover;
 	}
 	@media only screen and (max-width: 767px) {
 		.introducao {
-			background: url("<?php $background_home_medium[0] ?>") no-repeat center center;
+			background: url("<?php echo $background_home_medium[0] ?>") no-repeat center center;
 			background-size: cover;
 		}
 	}
 </style>
-
-<script>
-	console.log('valor: <?php $background_id ?>')
-</script>
 
 		<section class="introducao">
 			<div class="container">
