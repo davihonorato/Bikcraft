@@ -14,7 +14,7 @@
 
 <?php if(!is_page('portfolio')) { ?>
 <div class="call">
-    <p><?php the_field('chamada_portfolio', $portfolio); ?>conheça mais o nosso portfólio</p>
+    <p><?php the_field('chamada_portfolio', $portfolio); ?></p>
     <a href="/portifolio" class="btn"><?php the_field('botao_portfolio', $portfolio); ?></a>
 </div>
 <?php } ?>
