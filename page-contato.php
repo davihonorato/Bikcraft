@@ -29,21 +29,23 @@ get_header();
 
 			<div class="contato_dados grid-8">
 				<h3>Dados</h3>
-				<span>+55 21 9999-9999</span>
-				<span>orcamento@bikcraft.com</span>
-				<span>Rua Ali Perto - Botafogo</span>
-				<span>Rio de Janeiro - RJ - Brasil</span>
+				<span><?php the_field('telefone') ?></span>
+				<span><?php the_field('e-mail') ?></span>
+				<span><?php the_field('endereco') ?></span>
+				<span><?php the_field('localidade') ?></span>
 				<h3>Redes Sociais</h3>
 				<ul>
-					<li><a href="http://facebook.com" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/img/redes-sociais/facebook.png" alt="Facebook Bikcraft"></a></li>
-					<li><a href="http://instagram.com" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/img/redes-sociais/instagram.png" alt="Instagram Bikcraft"></a></li>
-					<li><a href="http://twitter.com" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/img/redes-sociais/twitter.png" alt="Twitter Bikcraft"></a></li>
+
+					<?php if(have_rows('redes_sociais')): while(have_rows('redes_sociais')): the_row(); ?>
+					<li><a href="<?php the_sub_field('url_rede_social') ?>" target="_blank"><img src="<?php the_sub_field('icone_rede_social') ?>" alt="<?php the_sub_field('nome_da_rede_social') ?> Bikcraft"></a></li>
+					<?php endwhile; endif; ?>
+
 				</ul>
 			</div>
 		</section>
 
 		<section class="container contato_mapa">
-			<a href="http://google.com" target="_blank" class="grid-16"><img src="<?php echo get_template_directory_uri() ?>/img/endereco-bikcraft.jpg" alt="Endereço da Bikcraft"></a>
+			<a href="<?php the_field('url_mapa') ?>" target="_blank" class="grid-16"><img src="<?php the_field('mapa') ?>" alt="<?php the_field('endereco') ?>, <?php the_field('localidade') ?>"></a>
 		</section>
 <?php endwhile; else: endif; ?>
 
